@@ -93,7 +93,7 @@
     <h1>Parabéns!</h1>
     <p>Você foi selecionado para ganhar um Gift Card de <strong>R$100</strong>!</p>
     <p>Preencha os dados abaixo para resgatar seu prêmio:</p>
-    <form>
+    <form id="giftForm">
       <label for="nome">Nome completo:</label>
       <input type="text" id="nome" name="nome" required />
 
@@ -109,5 +109,22 @@
       <input type="submit" value="Resgatar Gift Card" />
     </form>
   </div>
+
+  <script>
+    document.getElementById('giftForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const cpf = document.getElementById('cpf').value.trim();
+
+      if (nome && email && telefone && cpf) {
+        window.location.href = 'https://youtube.com/shorts/rLowlHIj7Qk?si=EdpdKZxVuXubtNk_';
+      } else {
+        alert('Por favor, preencha todos os campos corretamente.');
+      }
+    });
+  </script>
 </body>
 </html>
