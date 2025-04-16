@@ -20,7 +20,15 @@
     }
     h1 {
       text-align: center;
-      color: #2d8f2d;
+      animation: piscar 1.5s infinite;
+    }
+    @keyframes piscar {
+      0%, 100% {
+        color: red;
+      }
+      50% {
+        color: transparent;
+      }
     }
     p {
       text-align: center;
