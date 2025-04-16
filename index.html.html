@@ -13,20 +13,36 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      min-height: 100vh;
+      background: url('https://s2-techtudo.glbimg.com/Jeoz9zBNLopOsXB9M1cdY4Qg0Jg=/0x0:1200x675/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2023/12/21/gift_card.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
     }
 
     .container {
+      position: relative;
+      z-index: 1;
       background: #fff;
       padding: 30px 20px;
       max-width: 400px;
       width: 90%;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       text-align: center;
     }
 
